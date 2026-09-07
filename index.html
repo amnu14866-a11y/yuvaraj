@@ -1,1 +1,87 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon Stickers Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎨 StickerLand</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <button onclick="openCart()">🛒 Cart <span id="cart-count">0</span></button>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>Make Everything <span>Cuter!</span> ✨</h1>
+        <p>Discover fun, colorful and adorable cartoon stickers for your laptop, phone, notebooks and more.</p>
+        <a href="#shop" class="shop-btn">Shop Now 🛍️</a>
+    </div>
+
+    <div class="hero-art">
+        <div class="sticker">🐼</div>
+        <div class="sticker">🐱</div>
+        <div class="sticker">🦄</div>
+        <div class="sticker">🐸</div>
+    </div>
+</section>
+
+<section id="shop" class="shop">
+    <h2>Our Cartoon Stickers</h2>
+
+    <div class="filters">
+        <button onclick="filterProducts('all')">All</button>
+        <button onclick="filterProducts('animals')">Animals</button>
+        <button onclick="filterProducts('funny')">Funny</button>
+        <button onclick="filterProducts('cute')">Cute</button>
+    </div>
+
+    <div id="products" class="product-grid"></div>
+</section>
+
+<section id="about" class="about">
+    <h2>About StickerLand 💖</h2>
+    <p>
+        StickerLand is a fun online cartoon sticker shop where you can
+        find adorable stickers for your everyday items. Stick them on
+        laptops, bottles, notebooks, phones and more!
+    </p>
+</section>
+
+<!-- Cart -->
+<div id="cart-modal" class="modal">
+    <div class="cart-box">
+        <button class="close" onclick="closeCart()">×</button>
+
+        <h2>Your Cart 🛒</h2>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-total">
+            Total: ₹<span id="cart-total">0</span>
+        </div>
+
+        <button class="checkout-btn" onclick="checkout()">
+            Checkout 💳
+        </button>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 StickerLand | Made with ❤️ and 🎨</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
